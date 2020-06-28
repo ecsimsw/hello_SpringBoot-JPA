@@ -1,5 +1,6 @@
 package com.ecsimsw.domain;
 
+import com.ecsimsw.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +14,9 @@ public class OrderItem {
     @Column(name = "oder_item_id")
     private Long id; // FK
 
-    private Item item;
+    @ManyToOne
+    @JoinColumn(name = "item_id")
+    private Item item;  // FK
 
     @ManyToOne
     @JoinColumn(name = "order_id")
