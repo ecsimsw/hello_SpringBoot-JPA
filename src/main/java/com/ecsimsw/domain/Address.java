@@ -4,7 +4,7 @@ import lombok.Getter;
 
 import javax.persistence.Embeddable;
 
-@Embeddable
+@Embeddable //
 @Getter
 public class Address {
 

@@ -11,15 +11,15 @@ import java.util.ArrayList;
 @Entity
 @Getter @Setter
 public class Member {
-
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     @Column(name = "member_id")
     private Long id;
-
     private String name;
 
     @Embedded
     private Address address;
 
+    @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
 }
