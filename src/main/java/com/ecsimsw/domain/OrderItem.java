@@ -12,13 +12,13 @@ public class OrderItem {
 
     @Id @GeneratedValue
     @Column(name = "oder_item_id")
-    private Long id; // FK
+    private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")
     private Item item;  // FK
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private Order order; // FK
 
