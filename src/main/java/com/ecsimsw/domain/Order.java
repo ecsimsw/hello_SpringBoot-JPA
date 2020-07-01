@@ -32,7 +32,7 @@ public class Order {
 
     private LocalDateTime orderDate;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private OderStatus status; // ORDER, CANCEL
 
     public void setMember(Member member){
@@ -55,5 +55,4 @@ public class Order {
         this.delivery = delivery;
         delivery.setOrder(this);
     }
-
 }
