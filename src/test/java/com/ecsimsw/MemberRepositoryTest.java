@@ -1,6 +1,7 @@
 package com.ecsimsw;
 
 import com.ecsimsw.domain.Member;
+import com.ecsimsw.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +23,7 @@ public class MemberRepositoryTest {
     @Rollback(false)
     public void testMember() throws Exception{
         Member memberA = new Member();
-        memberA.setUsername("memberA");
+        memberA.setName("memberA");
 
         Long saveId = memberRepository.save(memberA);
         // ctrl+alt+v
@@ -30,6 +31,6 @@ public class MemberRepositoryTest {
         Member found = memberRepository.find(saveId);
 
         Assertions.assertThat(found.getId().equals(memberA.getId()));
-        Assertions.assertThat(found.getUsername().equals(memberA.getUsername()));
+        Assertions.assertThat(found.getName().equals(memberA.getName()));
     }
 }
