@@ -35,8 +35,9 @@ public class MemberRepository {
     // Entity manager factory를 얻고 싶으면 PersistenceUinit으로
 
     // ctrl+shift+t => test
-    public void save(Member member){
+    public Long save(Member member){
         em.persist(member);
+        return member.getId();
     }
 
     public Member findOne(Long id){
