@@ -22,7 +22,7 @@ public class OrderItem {
     @JoinColumn(name = "order_id")
     private Order order; // FK
 
-    private int oderPrice;
+    private int orderPrice;
 
     private int count;
 }
