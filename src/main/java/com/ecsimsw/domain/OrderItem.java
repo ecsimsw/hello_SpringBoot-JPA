@@ -26,6 +26,9 @@ public class OrderItem {
 
     private int count;
 
+    // 생성자 사용 제한.
+    protected OrderItem(){}
+
     // 생성 메소드 //
     public static OrderItem createOrderItem(Item item, int orderPrice, int count){
         OrderItem orderItem = new OrderItem();

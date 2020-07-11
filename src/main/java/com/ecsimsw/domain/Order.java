@@ -56,6 +56,9 @@ public class Order {
         delivery.setOrder(this);
     }
 
+    // 생성자 사용 제한.
+    protected Order(){}
+
     // == 생성 메소드 ===//
     public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems){
         Order order = new Order();
