@@ -29,12 +29,12 @@ public abstract class Item {
 
     // setter로 밖에서 값을 계산해서 entity에 set하는거 보다 안정적이고 객체 지향적이다.
 
-    // 제고 수량 증가
+    // 재고 수량 증가
     public void addStock(int stockQuantity){
         this.stockQuantity += stockQuantity;
     }
 
-    // 제고 수량 감소
+    // 재고 수량 감소
     public void removeStock(int stockQuantity) {
         int remain = this.stockQuantity - stockQuantity;
 
