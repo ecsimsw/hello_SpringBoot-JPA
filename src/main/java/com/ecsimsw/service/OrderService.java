@@ -8,6 +8,7 @@ import com.ecsimsw.domain.item.Item;
 import com.ecsimsw.repository.ItemRepository;
 import com.ecsimsw.repository.MemberRepository;
 import com.ecsimsw.repository.OrderRepository;
+import com.ecsimsw.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import net.bytebuddy.asm.Advice;
 import org.springframework.stereotype.Service;
@@ -78,4 +79,9 @@ public class OrderService {
 
     //검색
     //public List<Order> findOrders(OderSearch orderSearch)
+
+    public List<Order> findOrders(OrderSearch orderSearch){
+        return orderRepository.findAll(orderSearch);
+    }
+
 }
