@@ -12,4 +12,9 @@ public class HelloController {
         model.addAttribute("data","hello");
         return "hello";
     }
+
+    @GetMapping("/home")
+    public String home(Model model){
+        return "home";
+    }
 }
